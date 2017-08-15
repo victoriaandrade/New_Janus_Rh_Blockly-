@@ -1,0 +1,103 @@
+<div class="component-holder ng-binding ng-scope" data-component="crn-datasource" data-attribute-preview="" id="crn-datasource-733387"></div><div class="component-holder ng-binding ng-scope" data-component="crn-datasource" data-attribute-preview="" id="crn-datasource-396545"></div><div class="component-holder ng-binding ng-scope" data-component="crn-navbar" id="crn-navbar-986427">
+    <datasource name="funcionarioCV" entity="https://janus-i.techne.com.br/webservices/rest/funcionarioCV/buscaPorFuncionario?idFuncJanus={{usuario.data[0].id}}" headers="Authenticate:{{session.tokenJanus}}"></datasource>
+</div>
+<div ui-view="" class="container-fluid main-view container-principal" data-container="true">
+  <!-- INICIO CONTAINER PRINCIPAL -->
+  <div class="row painel-central">
+    <div class="col-md-4"></div>
+    <!-- INICIO PAINEL PRINCIPAL -->
+    <div class="home-grid-visualizacao col-md-12 col-lg-12 ">
+        <div>
+            <div class="component-holder ng-binding ng-scope" data-component="crn-vertical-container" id="crn-vertical-container-975876">
+                {{funcionarioCV.data}}
+            </div>
+        
+            <!-- aqui -->
+        
+            <div class="panel panel-default painel-cadastro"> 
+                <div class="panel-heading"> 
+                    <h3 class="panel-title">
+                        Cadastro currículo
+                     </h3>
+                </div>
+                <div class="panel-body"> 
+                    <div class="inner contact"> 
+                        <!-- Form Area --> 
+                        <div class="contact-form"> 
+                            <!-- Form --> 
+                            <form id="formFuncionarioCV" name="formFuncCV">
+                                <div class="row">
+                                    <!-- Left Inputs --> 
+                                    <div class="col-md-6"> 
+                                        <div class="col-xs-12 wow animated slideInLeft" data-wow-delay=".5s"> 
+                                            <!-- Nome --> 
+                                            <div class="row"> 
+                                                <div class="col-md-12"> 
+                                                    <input type="text" ng-model="funcionarioCV.active.nome" name="nome" id="nome" required="" class="form" placeholder="Nome">
+                                                </div> 
+                                            </div> 
+                                            <!-- SobreNome --> 
+                                            <div class="row"> 
+                                                <div class="col-md-12"> 
+                                                    <input type="text" ng-model="funcionarioCV.active.sobrenome" name="sobrenome" id="sobrenome" required="" class="form" placeholder="Sobrenome">
+                                                </div> 
+                                            </div> 
+                                            <!-- Email --> 
+                                            <div class="row"> 
+                                                <div class="col-md-12"> 
+                                                    <input type="email" ng-model="funcionarioCV.active.email" name="mail" id="mail" required="" class="form" placeholder="E-mail">
+                                                </div> 
+                                            </div> 
+                                            <!-- Telefone --> 
+                                            <div class="row"> 
+                                                <div class="col-md-6"> 
+                                                    <input type="text" ng-model="funcionarioCV.active.telefone" name="telefone" fone="" id="telefone" required="" class="form" placeholder="Telefone">
+                                                </div> 
+                                                <!-- Data nascimento --> 
+                                                <div class="col-md-6"> 
+                                                    <input type="text" as-date ng-model="funcionarioCV.active.dataNascimento" ui-date="" name="datanascimento" id="datanascimento" required="" class="form" placeholder="Data nascimento">
+                                                    <input type="text" ng-model="funcionarioCV.active.dataNascimento" ui-date="" name="datanascimentoDois" id="datanascimento" required="" class="form" placeholder="Data nascimento">
+                                                </div> 
+                                            </div> 
+                                        </div>   
+                                    </div> 
+                                    <!-- End Left Inputs --> 
+                                    <!-- Right Inputs --> 
+                                    <div class="row"> 
+                                        <div class="col-md-6"> 
+                                            <div class="col-xs-12 wow animated slideInRight" data-wow-delay=".5s"> 
+                                            <!-- Message --> 
+                                                <textarea name="resumo" ng-model="funcionarioCV.active.resumo" id="resumo" class="form textarea-cadastro " placeholder="Resumo"></textarea>
+                                            </div> 
+                                        </div> 
+                                        <!-- End Right Inputs --> 
+                                        <!-- Fim da linha coluna da direita -->     
+                                    </div> 
+                                    <!-- Fim da linha row --> 
+                                </div> 
+                                <!-- Bottom Submit --> 
+                                <div class="relative fullwidth col-xs-12 text-right"> 
+                                    <!-- Send Button -->
+                                    <button type="button" ng-click="submitFormFuncionarioCV()" class="form-btn semibold">Salvar</button>
+                                    <button type="button" ng-click="updateFormFuncionarioCV()" class="form-btn semibold">Atualizar</button>
+                                </div>
+                                <!-- End Bottom Submit --> 
+                                <!-- Clear --> 
+                            </form> 
+                        </div> 
+                        <!-- End Contact Form Area --> 
+                    </div> 
+                    <!-- End Inner --> 
+                </div> 
+            </div>
+        
+            <!-- fim aqui -->
+        
+        </div>
+      <!-- FIM DIV PANEL -->
+    </div>
+    <!-- FIM PAINEL PRINCIPAL -->
+    <div class="col-md-4"></div>
+  </div>
+  <!-- FIM CONTAINER PRINCIPAL -->
+</div>

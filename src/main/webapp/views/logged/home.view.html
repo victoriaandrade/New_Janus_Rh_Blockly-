@@ -1,0 +1,143 @@
+<div class="component-holder ng-binding ng-scope" data-component="crn-navbar" id="crn-navbar-986427">
+    <datasource name="usuario" entity="https://janus-i.techne.com.br/webservices/rest/usuarioInfo/{{username}}"   headers="Authenticate:{{session.tokenJanus}}"></datasource>
+    <datasource name="validacao" entity="https://janus-i.techne.com.br/webservices/rest/usuarioInfo/buscaCadastros/1010" ></datasource>
+    {{session.tokenJanus}}
+    
+  <nav class="navbar-janus-rh navbar navbar-default">
+    <div class="container-fluid">
+      <div class="navbar-header">
+        <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar"> <span class="sr-only">Toggle navigation</span> <span class="icon-bar"></span> <span class="icon-bar"></span> <span class="icon-bar"></span> </button>
+        <a class="navbar-brand" href="javascript:void(0);">
+          <div class="component-holder ng-binding ng-scope" data-component="crn-image" id="crn-image-535259">
+            <img src="img/logo-techne.png" style="max-height:30px; margin-top:-5px">
+          </div> </a>
+      </div>
+      <div id="navbar" class="navbar-collapse collapse">
+        <ul class="nav navbar-nav" style="float:none">
+          <li class="dropdown component-holder" data-component=""> <a href="#/home" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false"> <i class="fa fa-lg fa-home"></i> <span content="{{&quot;Home.view.Home&quot; | translate}}">Principal</span> </a> </li>
+          <li class="dropdown component-holder navbar-right" data-component="crn-menu-item"> <a href="javascript:void(0);" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false"> <img class="user-avatar" alt="{{session.user.name}}" ng-src="{{session.picture || 'img/nophoto.png'}}" style="max-height:18px;max-width:18px"> <span content="{{session.user.name}}">{{session.user.name}}</span> <span class="caret"></span> </a>
+            <ul class="dropdown-menu">
+              <li ng-click="logout()"><a href="javascript:void(0);"><span content="{{Home.view.Logout | translate}}">Sair</span></a></li>
+            </ul> </li>
+          <li class="dropdown component-holder" data-component="crn-menu-item"> <a class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false"><i class="glyphicon glyphicon-tasks"></i> <span>Menu</span> <span class="caret"></span></a>
+            <ul class="dropdown-menu">
+              <li><a href="#/home/logged/cadastro" class="component-holder" data-component="crn-anchor">Cadastro currículo</a></li>
+              <li><a href="#/home/logged/rh" class="component-holder" data-component="crn-anchor">Rh</a></li>
+            </ul></li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+</div>
+<div ui-view="" class="container-fluid main-view container-principal" data-container="true">
+  <!-- INICIO CONTAINER PRINCIPAL -->
+  <div class="row painel-central">
+    <div class="col-md-4"></div>
+    <!-- INICIO PAINEL PRINCIPAL -->
+    <div class="home-grid-visualizacao col-md-12 col-lg-12 ">
+      <div class="">
+        <div class="component-holder ng-binding ng-scope" data-component="crn-vertical-container" id="crn-vertical-container-975876">
+          <div class="text-center">
+           <!--Teste chamada serviços -->
+           <h2 class="component-holder ng-binding ng-scope">Bem vindo, {{usuario.data[0].nome}}</h2><br>
+           <!--{{usuario.data}}-->
+            <!-- INICIO GRID ICONES -->
+            <div class="container" data-container="true">
+              <div class="row active">
+                <div class="text-center icon-mobile-painel-central">
+                  <div class="row">
+                    <div class="text-center">
+                        <div class="col-xxs-12 col-xs-6 col-sm-4 col-md-3 col-lg-3">
+                            <div class="content-card">
+                                <a href="#/home/logged/cadastro" class="btn btn-painel-metro btn-painel-front btn-painel-back btn-painel-sq-lg btn-cadastro"> <i class="fa fa-pencil-square-o fa-5x"></i><br> Cadastro currículo </a>
+                            </div>
+                        </div>
+                        <div class="col-xxs-12 col-xs-6 col-sm-4 col-md-3 col-lg-3">
+                            <div class="content-card">
+                                <a href="#/home/logged/historico" class="btn btn-painel-metro btn-painel-front btn-painel-back btn-painel-sq-lg btn-historico"> <i class="fa fa fa-files-o fa-5x" aria-hidden="true"></i><br> Histórico </a>
+                            </div>
+                        </div>
+                        <div class="col-xxs-12 col-xs-6 col-sm-4 col-md-3 col-lg-3">
+                            <div class="content-card">
+                                <a href="#/home/logged/curso" class="btn btn-painel-metro btn-painel-front btn-painel-back btn-painel-sq-lg btn-curso"> <i class="fa fa-book fa-5x" aria-hidden="true"></i><br> Curso </a>
+                            </div>
+                        </div>
+                        <div class="col-xxs-12 col-xs-6 col-sm-4 col-md-3 col-lg-3">
+                            <div class="content-card">
+                                <a href="#/home/logged/formacao" class="btn btn-painel-metro btn-painel-front btn-painel-back btn-painel-sq-lg btn-formacao"> <i class="fa fa-graduation-cap fa-5x" aria-hidden="true"></i><br> Formação </a>
+                            </div>
+                        </div>
+
+                    </div>
+                  </div>
+                  <div class="row">
+                    <div class="text-center">
+
+                        <div class="col-xxs-12 col-xs-6 col-sm-4 col-md-3 col-lg-3">
+                            <div class="content-card">
+                                <a href="#/home/logged/certificacao" class="btn btn-painel-metro btn-painel-front btn-painel-back btn-painel-sq-lg btn-certificacao"> <i class="fa fa-bookmark fa-5x" aria-hidden="true"></i><br> Certificado </a>
+                            </div>
+                        </div>
+                        <div class="col-xxs-12 col-xs-6 col-sm-4 col-md-3 col-lg-3">
+                            <div class="content-card">
+                                <a href="#/home/logged/idioma" class="btn btn-painel-metro btn-painel-front btn-painel-back btn-painel-sq-lg btn-idioma"> <i class="fa fa-weixin fa-5x" aria-hidden="true"></i><br> Idioma </a>
+                            </div>
+                        </div>
+                        <div class="col-xxs-12 col-xs-6 col-sm-4 col-md-3 col-lg-3">
+                            <div class="content-card">
+                                <a href="#/home/logged/habilidades" class="btn btn-painel-metro btn-painel-front btn-painel-back btn-painel-sq-lg btn-habilidade"> <i class="fa glyphicon glyphicon-star-empty fa-5x" aria-hidden="true"></i><br> Habilidade </a>
+                            </div>
+                        </div>
+                        <div class="col-xxs-12 col-xs-6 col-sm-4 col-md-3 col-lg-3">
+                            <div class="content-card">
+                                <a href="#/home/logged/rh" class="btn btn-painel-metro btn-painel-front btn-painel-back btn-painel-sq-lg btn-rh"> <i class="fa fa-users fa-5x" aria-hidden="true"></i><br> Rh </a>
+                            </div>
+                        </div>
+
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <!-- FIM GRID ICONES -->
+          </div>
+        </div>
+      </div>
+      <!-- FIM DIV PANEL -->
+    </div>
+    <!-- FIM PAINEL PRINCIPAL -->
+    <div class="col-md-4"></div>
+  </div>
+  <!-- FIM CONTAINER PRINCIPAL -->
+</div>
+<div class="modal fade" id="modalPassword">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal" aria-label="{{'Home.view.Close' | translate}}"><span aria-hidden="true">×</span></button>
+        <h4 class="modal-title" content="{{&quot;Home.view.ChangePassword&quot; | translate}}">Trocar senha</h4>
+      </div>
+      <div class="modal-body">
+        <form class="form-validation" autocomplete="off" name="form" role="form">
+          <div class="text-danger wrapper text-center" ng-show="authError">
+          </div>
+          <div class="list-group list-group-sm">
+            <div class="list-group-item">
+              <input type="password" class="form-control no-border" id="oldPassword" placeholder="{{'Home.view.Old Password' | translate}}">
+            </div>
+            <div class="list-group-item">
+              <input type="password" class="form-control no-border" id="newPassword" placeholder="{{'Home.view.New Password' | translate}}">
+            </div>
+            <div class="list-group-item">
+              <input type="password" class="form-control no-border" id="newPasswordConfirmation" placeholder="{{'Home.view.Confirmation' | translate}}">
+            </div>
+          </div>
+        </form>
+      </div>
+      <div class="modal-footer">
+        <button class="btn btn-primary" type="submit" ng-click="changePassword()" ng-disabled="form.$invalid || vm.dataLoading" content="{{&quot;Home.view.ChangePassword&quot; | translate}}">Trrocar senha</button>
+        <button type="button" class="btn btn-default" data-dismiss="modal" content="{{'Home.view.Close' | translate}}">Fechar</button>
+      </div>
+    </div>
+  </div>
+</div>

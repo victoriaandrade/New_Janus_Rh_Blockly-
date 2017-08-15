@@ -1,0 +1,292 @@
+@import url(https://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,400,300,600,700);
+
+.ui-view-container-login {
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    top: 0;
+}
+
+.ui-view-container {
+    position: relative;
+}
+
+[ui-view].ng-leave {
+    -webkit-animation: scaleDown .7s ease both;
+    animation: scaleDown .7s ease both;
+}
+
+[ui-view].ng-enter {
+    -webkit-animation: moveFromBottom .9s ease both;
+    animation: moveFromBottom .9s ease both;
+}
+
+variaveis {
+    --main-bg-color: #1976d2;
+    --secondary-bg-color: #03a9f4;
+}
+
+.login-page-custom {
+    overflow: auto;
+    display: table;
+    width: 100%;
+    height: 100%;
+    background: #1976d2;
+    color: #fff;
+    padding: 3em;
+    position: relative !important;
+}
+
+.login-page-custom:before {
+    content: '';
+    background-color: rgba(255, 255, 255, .15);
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    width: 40%;
+    border-right: solid 120px #1976d2;
+}
+
+.login-page-custom h1 {
+    font-weight: 700;
+    line-height: 32px;
+    font-size: 34px;
+    color: #fff;
+}
+
+.login-page-custom h1 span {
+    font-size: 27px;
+}
+
+.login-page-custom h1 small {
+    color: #fff;
+    opacity: .7;
+    padding-right: 5px;
+    font-size: 16px;
+    display: block;
+    margin-top: 8px;
+}
+
+.login-page-custom .form-group {
+    padding: 8px 0;
+    margin-bottom: 0;
+}
+
+.login-page-custom .user-avatar-login {
+    max-width: 230px;
+    width: 100%;
+    border: 3px solid #fff;
+}
+
+.login-page-custom .img-container, .login-page-custom .form-content {
+    display: table-cell;
+    vertical-align: middle;
+    padding: 15px;
+}
+
+.login-page-custom .img-container {
+    text-align: right;
+    width: 40%;
+    position: relative;
+}
+
+.login-page-custom .form-content {
+    position: relative;
+}
+
+.login-page-custom .form-content .pro-link a {
+    color: #fff;
+    position: absolute;
+    right: 0;
+    top: 0;
+    font-weight: 600;
+}
+
+.login-page-custom .form-content .pro-link a:hover {
+    text-decoration: none;
+}
+
+.login-page-custom .form-content .table-form {
+    display: table;
+    width: 100%;
+}
+
+.login-page-custom .form-content .table-form .form-groups {
+    display: table-cell;
+    vertical-align: middle;
+}
+
+.login-page-custom .form-content .table-form .button-container {
+    display: table-cell;
+    vertical-align: middle;
+    width: 100px;
+}
+
+.login-page-custom .form-content .bottom-75 {
+    margin-bottom: 75px;
+    max-width: 400px;
+}
+
+.login-page-custom .form-content .input-lg {
+    border-radius: 0;
+}
+
+.login-page-custom .form-content .form-control {
+    background: #03a9f4;
+    border-color: #03a9f4;
+    box-shadow: none;
+    color: #fff;
+    font-weight: 600;
+}
+
+.login-page-custom .form-content ::-webkit-input-placeholder {
+    color: rgba(255, 255, 255, .7);
+    font-weight: 700;
+    font-size: 16px;
+    padding-top: 2px;
+}
+
+.login-page-custom .form-content :-moz-placeholder, .login-page-custom .form-content ::-moz-placeholder {
+    color: rgba(255, 255, 255, .7);
+    font-weight: 700;
+    font-size: 16px;
+    padding-top: 2px;
+}
+
+.login-page-custom .form-content :-ms-input-placeholder {
+    color: rgba(255, 255, 255, .7);
+    font-weight: 700;
+    font-size: 16px;
+    padding-top: 2px;
+}
+
+.login-page-custom .form-content .login {
+    height: 110px;
+    width: 100px;
+    border-radius: 0;
+    background: orange;
+    border-color: orange;
+    box-shadow: none;
+    margin-left: 15px;
+    color: #fff;
+}
+
+.login-page-custom .form-content .login:focus {
+    outline: none;
+    /*outline-offset: 0;*/
+}
+
+.login-page-custom .remember {
+    margin-top: 8px;
+}
+
+.login-page-custom .remember .checkbox1 {
+    padding-right: 5px;
+}
+
+.login-page-custom .remember span.pass {
+    float: right;
+    padding-top: 2px;
+}
+
+.user-avatar-login2 {
+    width: 120px;
+    border: 2px solid #fff;
+    margin-bottom: 5px;
+}
+
+.login2 {
+    height: 38px;
+    border-radius: 0;
+    width: 46px;
+    margin-right: 12px;
+    background: orange;
+    border-color: orange;
+    box-shadow: none;
+    color: #fff;
+}
+
+.login2:focus {
+    outline: none;
+    /*outline-offset: 0;*/
+}
+
+.login2:hover {
+    color: orange;
+    background: #fff;
+    border-color: #fff;
+}
+
+@media (max-width: 768px) {
+    .login-page-custom:before {
+        content: '';
+        background-color: rgba(255, 255, 255, .15);
+        position: absolute;
+        left: 0;
+        right: 0;
+        top: 0;
+        width: 100%;
+        border-right: none;
+    }
+
+    .login-page-custom, .img-content, .form-content {
+        display: block !important;
+    }
+
+    .img-container .pull-right {
+        float: none !important;
+    }
+
+    .img-container .img-responsive {
+        display: initial;
+    }
+
+    .form-content .remember {
+        width: 100% !important;
+    }
+
+    .pro-link {
+        display: none !important;
+    }
+
+    .login-page-custom .form-content .bottom-75 {
+        margin: 0 auto;
+    }
+
+    .login-page-custom {
+        padding: 15px;
+    }
+
+    .login-page-custom .img-container {
+        display: block;
+        width: 100%;
+    }
+}
+
+@media (max-width: 400px) {
+    .login-page-custom .form-content .table-form {
+        display: block;
+    }
+
+    .login-page-custom .form-content .table-form .form-groups, .login-page-custom .form-content .table-form .button-container {
+        display: block;
+        width: 100%;
+    }
+
+    .login-page-custom .form-content .table-form .form-groups .login, .login-page-custom .form-content .table-form .button-container .login {
+        width: 100%;
+        height: 46px;
+        margin: 8px 0 0;
+    }
+
+    .login-page-custom .form-content .table-form .form-groups .login img, .login-page-custom .form-content .table-form .button-container .login img {
+        max-width: 26px;
+    }
+
+    .login-page-custom .user-avatar-login {
+        max-width: 200px;
+    }
+}
